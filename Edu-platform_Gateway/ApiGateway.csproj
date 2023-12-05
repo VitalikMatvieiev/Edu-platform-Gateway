@@ -7,4 +7,8 @@
     <RootNamespace>Edu_platform_Gateway</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Ocelot" Version="22.0.0" />
+  </ItemGroup>
+
 </Project>

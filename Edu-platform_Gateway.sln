@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edu-platform_Gateway", "Edu-platform_Gateway\Edu-platform_Gateway.csproj", "{74E6382E-3416-49B4-B53C-9D6C4DD4E125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "Edu-platform_Gateway\ApiGateway.csproj", "{74E6382E-3416-49B4-B53C-9D6C4DD4E125}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
