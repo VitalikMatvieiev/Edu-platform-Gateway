@@ -27,6 +27,14 @@ The Project works on .Net 6 and is using next libraries:
 - Ocelot - the most importang NuGet Package, that handles all the routes and settings of gateway. 
 
 ### Installation
+If You are using the other than Windows operating system (Linux / MacOS) You will possibly be needed to install the .Net 6 on Your machine.
+You can do that by following one of the next guides:
+- https://learn.microsoft.com/en-us/dotnet/core/install/macos
+- https://www.youtube.com/watch?v=Jr0XGKHoYU0&ab_channel=MainlyWebStuff
+- https://maartenmerken.medium.com/installing-net-6-alpha-on-your-m1-mac-23a35aa6f02c
+
+After that You need:
+
 # Clone the repository
 git clone https://github.com/VitalikMatvieiev/Edu-platform-Gateway.git
 
