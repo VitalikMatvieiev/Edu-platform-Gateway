@@ -1,0 +1,207 @@
+﻿{
+  "Routes": [
+    // Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Identity",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Identity"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Identity/{identityId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Identity/{identityId}"
+    },
+    // User Web API
+    {
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User"
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/{userId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/{userId}"
+    },
+    // Course Web API
+    {
+      "UpstreamPathTemplate": "/api/Course",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8030
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Course"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Course/{courseId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8030
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Course/{courseId}"
+    },
+    // File Web API
+    {
+      "UpstreamPathTemplate": "/api/File",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8040
+        }
+      ],
+      "DownstreamPathTemplate": "/api/File"
+    },
+    {
+      "UpstreamPathTemplate": "/api/File/{fileId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8040
+        }
+      ],
+      "DownstreamPathTemplate": "/api/File/{fileId}"
+    },
+    // Forum Web API
+    {
+      "UpstreamPathTemplate": "/api/Forum",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8050
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Forum"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Forum/{forumId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8050
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Forum/{forumId}"
+    },
+    // AIBot Web API
+    {
+      "UpstreamPathTemplate": "/api/AIBot",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8060
+        }
+      ],
+      "DownstreamPathTemplate": "/api/AIBot"
+    },
+    {
+      "UpstreamPathTemplate": "/api/AIBot/{aibotId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8060
+        }
+      ],
+      "DownstreamPathTemplate": "/api/AIBot/{aibotId}"
+    },
+    // Analytics Web API
+    {
+      "UpstreamPathTemplate": "/api/Analytics",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8070
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Analytics"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Analytics/{analyticsId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8070
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Analytics/{analyticsId}"
+    },
+    // Payment Web API
+    {
+      "UpstreamPathTemplate": "/api/Payment",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Payment"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Payment/{paymentId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Payment/{paymentid}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8001"
+  }
+}
