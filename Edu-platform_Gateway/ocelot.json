@@ -11,7 +11,14 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Identity"
+      "DownstreamPathTemplate": "/api/Identity",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "roles": "admin"
+      }
     },
     {
       "UpstreamPathTemplate": "/api/Identity/{identityId}",
@@ -23,7 +30,14 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Identity/{identityId}"
+      "DownstreamPathTemplate": "/api/Identity/{identityId}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "roles": "admin"
+      }
     },
     // User Web API
     {
