@@ -1,9 +1,115 @@
 ﻿{
   "Routes": [
-    // Identity Web API
+    // Authentication Register Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Authentication/Register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Authentication/Register"
+    },
+    // Authentication Login Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Authentication/Login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Authentication/Login"
+    },
+    // Claim Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Claim",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Claim",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      } //,
+      //"RouteClaimsRequirement": {
+      //  "roles": "admin"
+      //}
+    },
+    // Claim {id} Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Claim/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Claim/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      } //,
+      //"RouteClaimsRequirement": {
+      //  "roles": "admin"
+      //}
+    },
+    // Role Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Role",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Role",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      } //,
+      //"RouteClaimsRequirement": {
+      //  "roles": "admin"
+      //}
+    },
+    // Role {id} Identity Web API
+    {
+      "UpstreamPathTemplate": "/api/Role/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Role/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      } //,
+      //"RouteClaimsRequirement": {
+      //  "roles": "admin"
+      //}
+    },
+    // Identity Identity Web API
     {
       "UpstreamPathTemplate": "/api/Identity",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -15,14 +121,15 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
-      },
-      "RouteClaimsRequirement": {
-        "roles": "admin"
-      }
+      } //,
+      //"RouteClaimsRequirement": {
+      //  "roles": "admin"
+      //}
     },
+    // Identity {id} Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Identity/{identityId}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamPathTemplate": "/api/Identity/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -30,14 +137,14 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Identity/{identityId}",
+      "DownstreamPathTemplate": "/api/Identity/{id}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
-      },
-      "RouteClaimsRequirement": {
-        "roles": "admin"
-      }
+      } //,
+      //"RouteClaimsRequirement": {
+      //  "roles": "admin"
+      //}
     },
     // User Web API
     {
@@ -64,31 +171,6 @@
       ],
       "DownstreamPathTemplate": "/api/User/{userId}"
     },
-    // Course Web API
-    {
-      "UpstreamPathTemplate": "/api/Course",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8030
-        }
-      ],
-      "DownstreamPathTemplate": "/api/Course"
-    },
-    {
-      "UpstreamPathTemplate": "/api/Course/{courseId}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8030
-        }
-      ],
-      "DownstreamPathTemplate": "/api/Course/{courseId}"
-    },
     // File Web API
     {
       "UpstreamPathTemplate": "/api/File",
@@ -113,6 +195,31 @@
         }
       ],
       "DownstreamPathTemplate": "/api/File/{fileId}"
+    },
+    // Course Web API
+    {
+      "UpstreamPathTemplate": "/api/Course",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8030
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Course"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Course/{courseId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8030
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Course/{courseId}"
     },
     // Forum Web API
     {
