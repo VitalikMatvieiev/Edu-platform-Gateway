@@ -133,28 +133,16 @@
     },
     // User Web API
     {
-      "UpstreamPathTemplate": "/api/User",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
-      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/instructorrates/",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 8020
+          "Port": 8000
         }
       ],
-      "DownstreamPathTemplate": "/api/User"
-    },
-    {
-      "UpstreamPathTemplate": "/api/User/{userId}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8020
-        }
-      ],
-      "DownstreamPathTemplate": "/api/User/{userId}"
+      "DownstreamPathTemplate": "/api/instructorrates/"
     }
   ],
   "GlobalConfiguration": {
