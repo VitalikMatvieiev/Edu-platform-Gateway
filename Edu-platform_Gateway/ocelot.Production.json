@@ -142,7 +142,11 @@
           "Port": 8000
         }
       ],
-      "DownstreamPathTemplate": "/api/instructorrates/"
+      "DownstreamPathTemplate": "/api/instructorrates/",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     }
   ],
   "GlobalConfiguration": {
