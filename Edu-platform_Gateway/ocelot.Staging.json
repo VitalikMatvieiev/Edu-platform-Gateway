@@ -2,7 +2,7 @@
   "Routes": [
     // Authentication Register Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Authentication/Register",
+      "UpstreamPathTemplate": "/api/authentication/register",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -11,11 +11,11 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Authentication/Register"
+      "DownstreamPathTemplate": "/api/authentication/register"
     },
     // Authentication Login Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Authentication/Login",
+      "UpstreamPathTemplate": "/api/authentication/login",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -24,11 +24,11 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Authentication/Login"
+      "DownstreamPathTemplate": "/api/authentication/login"
     },
     // Claim Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Claim",
+      "UpstreamPathTemplate": "/api/claim",
       "UpstreamHttpMethod": [ "GET", "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -37,7 +37,7 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Claim",
+      "DownstreamPathTemplate": "/api/claim",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -48,7 +48,7 @@
     },
     // Claim {id} Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Claim/{id}",
+      "UpstreamPathTemplate": "/api/claim/{id}",
       "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -57,7 +57,7 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Claim/{id}",
+      "DownstreamPathTemplate": "/api/claim/{id}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -65,7 +65,7 @@
     },
     // Role Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Role",
+      "UpstreamPathTemplate": "/api/role",
       "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -74,7 +74,7 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Role",
+      "DownstreamPathTemplate": "/api/role",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -82,7 +82,7 @@
     },
     // Role {id} Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Role/{id}",
+      "UpstreamPathTemplate": "/api/role/{id}",
       "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -91,7 +91,7 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Role/{id}",
+      "DownstreamPathTemplate": "/api/role/{id}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -99,7 +99,7 @@
     },
     // Identity Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Identity",
+      "UpstreamPathTemplate": "/api/identity",
       "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -108,7 +108,7 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Identity",
+      "DownstreamPathTemplate": "/api/identity",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -116,7 +116,7 @@
     },
     // Identity {id} Identity Web API
     {
-      "UpstreamPathTemplate": "/api/Identity/{id}",
+      "UpstreamPathTemplate": "/api/identity/{id}",
       "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -125,7 +125,7 @@
           "Port": 8010
         }
       ],
-      "DownstreamPathTemplate": "/api/Identity/{id}",
+      "DownstreamPathTemplate": "/api/identity/{id}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
